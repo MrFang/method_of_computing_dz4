@@ -57,7 +57,6 @@ def integrate(f, start, end):
         if (s1 - s2) < 15*EPS:
             return s2
 
-
 x = [i*pi/200 for i in range(101)]
 
 f_y = [f(x) for x in x]
