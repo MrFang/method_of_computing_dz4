@@ -60,7 +60,7 @@ def integrate(f, start, end):
 x = [i*pi/200 for i in range(101)]
 
 f_y = [f(x) for x in x]
-S_y = [S_1(el) if el < pi/4 else S_2(el) for el in x]
+S_y = [S_1(x) if x < pi/4 else S_2(x) for x in x]
 
 plt.plot(x, f_y, label='f')
 plt.plot(x, S_y, label = 'S')
