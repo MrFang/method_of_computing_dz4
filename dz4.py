@@ -47,15 +47,16 @@ def integrate(f, start, end):
         return r*(end - start)/(6*n)
 
     n = 2
+    s1 = sympson_integrate(n)
 
     while(True):
-        s1 = sympson_integrate(n)
         s2 = sympson_integrate(2*n)
 
-        n = 2*n
-
-        if (s1 - s2) < 15*EPS:
+        if (abs(s1 - s2)) < 15*EPS:
             return s2
+        
+        s1 = s2
+        n = 2*n
 
 x = [i*pi/200 for i in range(101)]
 
