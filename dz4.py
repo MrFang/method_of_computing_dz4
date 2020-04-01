@@ -67,4 +67,8 @@ plt.plot(x, S_y, label = 'S')
 plt.legend()
 plt.show()
 
-print(integrate(f, 0, pi/2))
+print(
+    f'Первый многочлен (0 <= x <= pi/4): {coff_1[0]:3.2f}(x^3) + {coff_1[1]:3.2f}(x^2) + {coff_1[2]:3.2f}x + {coff_1[3]:3.2f}\n'
+    f'Второй многочлен (pi/4 <= x <= pi/2): {coff_2[0]:3.2f}(x^3) + {coff_2[1]:3.2f}(x^2) + {coff_2[2]:3.2f}x + {coff_2[3]:3.2f}\n'
+    f'Интеграл от f на [0, pi/2] = {integrate(f, 0, pi/2):3.2f}'
+)
